@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>todo mvc</title>
+		<link rel="stylesheet" href="css/mvc.css" />
+		<script src="js/mvc.js"></script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<dir>
+			<div style="margin-top:10px;text-align:center">
+				<span id="currentCountSpan">当前记录共0条</span>
+				<span id="countSpan">总记录共0条</span>
+				<div>
+						<button onclick="show(allList)" >ALL</button>
+						<button onclick="show(todoList)">Active</button>
+						<button onclick="show(completedList)">Completed</button>
+						<button onclick="deleteCompleted()"> clear Completed</button>
+				</div>
+				<br/>
+				<input id="todoContent"  type="text" placeholder="请输入内容" onkeydown="javascript:if(event.keyCode==13) addTodo()"/>
+				
+				<div class="content" style="text-align: left;">
+					<!-- <div  v-for="todo in showList" style="text-align:left">
+					   <input :id="todo.id" type="checkbox" @click="clickCheckBox(todo)" v-model="todo.isFinish" style="width:15px;height:15px"/> 
+
+					   <span style="font-family:'楷体';font-size:24px">{{ todo.text }}</span>
+
+					   <div @click="deleteTodo(todo)" style="float:right;"><img src="../assets/delete.png" style="width:20px;height:20px"/></div>
+					</div> -->
+				</div>
+           
+			</div>
+		</dir>
+	</body>
+</html>
+
+
